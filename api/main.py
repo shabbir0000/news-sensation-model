@@ -5,6 +5,7 @@ import os
 
 from api.feature_engineering import LABEL_DETAILS, extract_features, feature_contribution_percent
 
+app = FastAPI(title="News Headline Analyzer API")
 # -----------------------
 # Load saved models
 # -----------------------
@@ -31,7 +32,7 @@ cluster_labels = {
 # -----------------------
 # FastAPI app
 # -----------------------
-app = FastAPI(title="News Headline Analyzer API")
+
 
 # -----------------------
 # Request schema
