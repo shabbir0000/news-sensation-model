@@ -1,7 +1,0 @@
-[project]
-name = "news-sensation-model"
-
-[tool.vercel]
-framework = "fastapi"
-app = "api/main.py:app"
-
