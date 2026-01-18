@@ -7,8 +7,8 @@ from feature_engineering import LABEL_DETAILS, extract_features, feature_contrib
 # -----------------------
 # Load saved models
 # -----------------------
-scaler = joblib.load("sensational_scaler_model_v1.1.pkl")
-kmeans = joblib.load("sensational_kmeans_model_v1.1.pkl")
+scaler = joblib.load("models/sensational_scaler_model_v1.1.pkl")
+kmeans = joblib.load("models/sensational_kmeans_model_v1.1.pkl")
 
 # -----------------------
 # Cluster labels

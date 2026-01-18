@@ -1,8 +1,6 @@
 fastapi
-uvicorn
-BaseModel
+pydantic
 scikit-learn
 numpy
 pandas
 joblib
-math
