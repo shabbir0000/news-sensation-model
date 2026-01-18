@@ -1,25 +1,25 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
-import os
+# import os
 
-from api.feature_engineering import LABEL_DETAILS, extract_features, feature_contribution_percent
+from feature_engineering import LABEL_DETAILS, extract_features, feature_contribution_percent
 
 app = FastAPI()
 # -----------------------
 # Load saved models
 # -----------------------
-# scaler = joblib.load("models/sensational_scaler_model_v1.1.pkl")
-# kmeans = joblib.load("models/sensational_kmeans_model_v1.1.pkl")
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+scaler = joblib.load("sensational_scaler_model_v1.1.pkl")
+kmeans = joblib.load("sensational_kmeans_model_v1.1.pkl")
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-scaler = joblib.load(
-    os.path.join(BASE_DIR, "models", "sensational_scaler_model_v1.1.pkl")
-)
+# scaler = joblib.load(
+#     os.path.join(BASE_DIR, "models", "sensational_scaler_model_v1.1.pkl")
+# )
 
-kmeans = joblib.load(
-    os.path.join(BASE_DIR, "models", "sensational_kmeans_model_v1.1.pkl")
-)
+# kmeans = joblib.load(
+#     os.path.join(BASE_DIR, "models", "sensational_kmeans_model_v1.1.pkl")
+# )
 # -----------------------
 # Cluster labels
 # -----------------------
