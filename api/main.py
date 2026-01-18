@@ -5,7 +5,7 @@ import os
 
 from api.feature_engineering import LABEL_DETAILS, extract_features, feature_contribution_percent
 
-app = FastAPI(title="News Headline Analyzer API")
+app = FastAPI()
 # -----------------------
 # Load saved models
 # -----------------------
